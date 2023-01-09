@@ -61,7 +61,7 @@ function enviarWhatsapp() {
     - Prato: ${prato.innerHTML}
     - Bebida: ${bebida.innerHTML}
     - Sobremesa: ${sobremesa.innerHTML}
-    Total: R$${soma.toFixed(2).replace('.', ',')}
+    Total: R$${ soma.toFixed(2).replace('.', ',')}
   `;
 
   const whatsapp = `https://wa.me/5521996630608?text=${encodeURIComponent(message)}`;
