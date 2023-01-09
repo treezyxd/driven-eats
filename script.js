@@ -40,3 +40,31 @@ function verificaPedido() {
     mudarBotao.innerHTML = "Fechar pedido";
   }
 }
+
+function enviarWhatsapp() {
+  const prato = document.querySelector('.food-list .selecionado .price');
+  const bebida = document.querySelector('.drink-list .selecionado .price');
+  const sobremesa = document.querySelector('.dessert-list .selecionado .price');
+  const pratoPreco = document.querySelector('.food-list .selecionado .price');
+  const bebidaPreco = document.querySelector('.drink-list .selecionado .price');
+  const sobremesaPreco = document.querySelector('.dessert-list .selecionado .price');
+
+  
+  const resultadoPrato = pratoPreco.innerHTML.split(' ')[1].replace(',', '.');
+  const resultadoBebida = bebidaPreco.innerHTML.split(' ')[1].replace(',', '.');
+  const resultadoSobremesa = sobremesaPreco.innerHTML.split(' ')[1].replace(',', '.');
+
+  const soma = Number(resultadoPrato) + Number(resultadoBebida) + Number(resultadoSobremesa);
+
+  const message = `
+    Olá, gostaria de fazer o pedido:
+    - Prato: ${prato.innerHTML}
+    - Bebida: ${bebida.innerHTML}
+    - Sobremesa: ${sobremesa.innerHTML}
+    Total: ${soma}
+  `;
+
+  const whatsapp = `https://wa.me/5521996630608?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsapp);
+}
