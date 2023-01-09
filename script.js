@@ -42,9 +42,9 @@ function verificaPedido() {
 }
 
 function enviarWhatsapp() {
-  const prato = document.querySelector('.food-list .selecionado .price');
-  const bebida = document.querySelector('.drink-list .selecionado .price');
-  const sobremesa = document.querySelector('.dessert-list .selecionado .price');
+  const prato = document.querySelector('.food-list .selecionado .product-name');
+  const bebida = document.querySelector('.drink-list .selecionado .product-name');
+  const sobremesa = document.querySelector('.dessert-list .selecionado .product-name');
   const pratoPreco = document.querySelector('.food-list .selecionado .price');
   const bebidaPreco = document.querySelector('.drink-list .selecionado .price');
   const sobremesaPreco = document.querySelector('.dessert-list .selecionado .price');
