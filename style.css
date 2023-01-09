@@ -138,7 +138,7 @@ body {
   z-index: 2;
 }
 
-.finish-order button {
+.btn {
   padding: 10px 100px;
   border-radius: 50px;
   border: none;
@@ -169,5 +169,4 @@ ion-icon {
 
 .btn-selecionado {
   background-color: #32b72f;
-  color: #fff;
 }
